@@ -11,8 +11,38 @@
     <!-- sidebar with the title "Library" and a button to add books to its library 
      -->
     <div class="sidebar">
+
+        <dialog id="bookDialog">
+            <form method="dialog" id="formDialog">
+              <p>
+                <fieldset><label for="author">Author:</label>
+                <input type="text" id="author" name="author" placeholder="B.F. Skinner" autofocus required>
+                </fieldset>
+                <fieldset>
+                <label for="bookName">Book name:</label>
+                <input type="text" id="bookName" name="bookName" placeholder="Science and Human Behavior" autofocus required>
+                </fieldset>
+                <fieldset>
+                <label for="pages">Pages:</label>
+                <input type="number" id="pages" name="pages" placeholder="123" autofocus required>
+                </fieldset>
+                <fieldset>
+                    <label for="read">Did you read it?</label>
+                    <!-- switch it from select to type radio-->
+                    <select id="read" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+              </p>
+              <div>
+                <button id="cancel" type="reset" class="dialog-cancel-button">Cancel</button>
+                <button type="submit" class="dialog-confirm-button" id="dialog-confirm-button">Confirm</button>
+              </div>
+            </form>
+          </dialog>
+        
         <div class="add-btn">
-            <button>Add a book</button>
+            <button id="addBookBtn">Add a book</button>
         </div>
 
         <div class="library">
@@ -32,23 +62,7 @@
      -->
     <div class="main-content">
         <div class="cards">
-            <div class="card">
-                <div class="card-author">Author: </div>
-                <div class="card-title">Title: </div>
-                <div class="card-pages">Number of pages: </div>
-                <div class="card-read">Read</div>
-            </div><div class="card">
-                <div class="card-author">Author: </div>
-                <div class="card-title">Title: </div>
-                <div class="card-pages">Number of pages: </div>
-                <div class="card-read">Read</div>
-            </div>
-            <div class="card">
-                <div class="card-author">Author: </div>
-                <div class="card-title">Title: </div>
-                <div class="card-pages">Number of pages: </div>
-                <div class="card-read">Read</div>
-            </div>           
+                   
         </div>
     </div>
     <!-- footer with the credits to the owner

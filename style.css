@@ -41,9 +41,11 @@ body{
 .add-btn button{
     font-size: 20px;
     border: 0px;
-    padding: 0px;
+    padding: 10px;
     background-color: white;
     text-decoration: none;
+    background-color: lightgreen;
+    border-radius: 10px;
 }
 
 .main-content{
@@ -60,20 +62,34 @@ body{
     justify-content: center;
 }
 
-.card{
+.card {
     width: 250px;
     height: 250px;
     display: grid;
-    grid-template: 1fr 2fr 1fr 1fr / 1fr;
+    grid-template-rows: 1fr 1fr 1fr auto auto;
     background-color: whitesmoke;
     border-radius: 50px;
+    padding: 10px;
 }
+
 
 .card div{
     display: grid;
     align-items: center;
     justify-content: center;
+    font-size: 16px;
 }
+
+.card button {
+    border: none;
+    padding: 10px;
+    font-family: 'roboto';
+    font-size: 16px;
+    border-radius: 30px;
+    margin: 5px 20px;
+    cursor: pointer;
+}
+
 
 .footer{
     display: flex;
@@ -99,3 +115,59 @@ img:hover{
     transform: rotate(360deg) scale(1.2);
 }
 
+dialog{
+    border: 0px;
+    border-radius: 20px;
+}
+
+dialog fieldset{
+    margin: 0px;
+    border: 0px;
+}
+
+dialog div{
+    display: flex;
+    justify-content: space-between;
+}
+
+fieldset input, fieldset select{
+    border-radius: 10px;
+}
+
+
+.dialog-cancel-button{
+    background-color: #ffb09c;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0px;
+    font-weight: 700;
+}
+
+.dialog-confirm-button{
+    background-color: lightgreen;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0px;
+    font-weight: 700;
+    width: 150px;
+}
+
+.card-read.read-yes {
+    background-color: lightgreen;
+    color: black;
+}
+
+.card-read.read-no {
+    background-color: #ff8080;
+    color: white;
+}
+
+.card-remove {
+    background-color: #ffd6d6;
+    color: #900;
+    transition: background-color 0.3s ease;
+}
+
+.card-remove:hover {
+    background-color: #ff9999;
+}
